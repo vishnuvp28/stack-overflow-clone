@@ -1,0 +1,19 @@
+.tags{
+    padding: 20px;
+    display: flex;
+}
+.tag{
+    border: 0.5px solid rgb(195, 191, 191);
+  height: 200px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+  color: rgb(26, 96, 247);
+}
+
+.ta{
+    display: flex;
+    flex-wrap: wrap;
+}

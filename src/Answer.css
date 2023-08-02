@@ -1,0 +1,29 @@
+.txt5{
+    padding:9px;
+    margin: 50px;
+    width:95%;
+    font-size: larger;
+}
+.txt6{
+    padding:15px;
+    margin-left:50px;
+    width:95%;
+    font-size: larger;
+    height:fit-content;
+    margin-top: -20px;
+
+}
+.btn2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:10px;
+    background-color: rgb(28, 120, 248);
+    color:white;
+    padding:15px;
+    margin-left:50%;
+}
+
+.an{
+    padding:13px;
+}

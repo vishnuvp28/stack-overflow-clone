@@ -1,0 +1,16 @@
+
+.butt{
+    padding: 10px;
+    margin: 10px;
+    color:azure;
+    background-color: rgb(26, 96, 247);
+    border-radius: 6px;
+     
+}
+.card{
+     padding-left: 10px;
+     padding-top: 20px;
+}
+.topic{
+    color: rgb(50, 106, 245);
+}
