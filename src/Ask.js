@@ -15,6 +15,7 @@ export const Ask = () => {
       views:0,
       votes:0,
       tags:"",
+      companies:"",
     },
     onSubmit: (values) => {
       console.log(values);

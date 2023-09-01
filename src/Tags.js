@@ -5,7 +5,7 @@ import './Tags.css';
 import { API } from './global';
 
 export function Tags() {
-  const [state,setState]=useState([])
+  const [state,setState]=useState(null)
   // const history=useHistory();
   useEffect(() => {
     fetch(`${API}/tags`)
@@ -15,10 +15,10 @@ export function Tags() {
  console.log(state)
   return (
     <Base >
-    <div className='tags'>
+    <div className='users'>
       <h1>Tags</h1>
       <div>
-        {state ? <GetTag data={state}/> : <h2>Loading</h2>}
+        {state ? <GetTag data={state}/> : <h3>Loading</h3>}
       </div>
     </div>
     </Base>
@@ -26,7 +26,7 @@ export function Tags() {
 }
 function GetTag({data}){
   return(
-    <div className='ta'>
+    <div className='user'>
       {data.map((data, index) => (
         <Data data={data} key={index} />
       ))}
@@ -36,7 +36,7 @@ function GetTag({data}){
 
 function Data({data}){
   return(
-    <div className='tag'>
+    <div className='use'>
       <h3>{data.tags}</h3>
     </div>
   )

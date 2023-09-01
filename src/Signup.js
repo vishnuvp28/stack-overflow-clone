@@ -2,12 +2,37 @@ import React from "react";
 import "./Signup.css";
 import Form from "react-bootstrap/Form";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-// import { useState } from "react";
+// import { useHistory } from "react-router-dom/cjs/react-rou//ter-dom.min";
+import { useFormik } from "formik";
+import { API } from "./global";
+import { useHistory } from "react-router-dom/cjs/react-router-dom";
 
 export function Signup() {
  
-  const history=useHistory();
+  const history =useHistory();
+  // const[formState,setFormState]=useState("error")
+  const {values,handleChange,handleSubmit} = useFormik({
+    initialValues :{userName : "",password:""},
+    onSubmit:async (values)=>{
+      console.log(values);
+
+
+      const data = await fetch(`${API}/`, {
+        method:"POST",
+        headers :{
+          "Content-type":"application/json",
+        },
+        body: JSON.stringify(values),
+      });
+      if (data.status === 400) {
+        alert("UserName already exist(redirecting to login page)");
+        history.push("/login");
+      } else {
+        alert("User added successfully");
+        history.push("/login");
+      }
+    },
+  })
   return (
     <div className="signup">
       <div className="div1">
@@ -17,23 +42,23 @@ export function Signup() {
         ></img>
       </div>
       <div className="div2">
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <br></br> <br></br>
           <h1 className="si">Sign up</h1> <br></br>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Control type="text" placeholder="Enter name" name="userName"/>
+            <Form.Control  placeholder="Enter name"  value={values.userName} onChange={handleChange} name="userName"/>
           </Form.Group>
         
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Control type="password" placeholder="Password" />
-          </Form.Group>
+          <Form.Group className="mb-3"     controlId="formBasicPassword">
+        <Form.Control type="password" value={values.password} onChange={handleChange} name="password" placeholder="Password" />
+      </Form.Group>
           
           <button className="b" variant="primary" type="submit" onClick={()=>history.push("/login")}>
             Sign Up
           </button>
           <br></br>
           <div className="alink">
-            <a href="#">Forgot Password?</a><br></br>
+            <a href="#" >Forgot Password?</a><br></br>
           <a href="http://localhost:3000/login">Login</a>
         </div>
           <br></br>
@@ -42,4 +67,4 @@ export function Signup() {
       </div>{" "}
     </div>
   );
-}
+  }

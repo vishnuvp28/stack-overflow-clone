@@ -12,10 +12,9 @@ export  function Login() {
   const history =useHistory()
   const[formState,setFormState]=useState("error")
   const {values,handleChange,handleSubmit} = useFormik({
-    initialValues :{userName : "vp",password:"vp@123"},
+    initialValues :{userName : "",password:""},
     onSubmit:async (values)=>{
       console.log(values);
-
 
       const data = await fetch(`${API}/login`,{
         method:"POST",
@@ -60,7 +59,9 @@ export  function Login() {
        variant="primary" >
         {formState ==="success" ? "Retry" :"Submit"}
        
-      </button><br></br><br></br>
+       
+      </button><br></br>
+      <button variant="danger" className="red" onClick={()=>history.push("/")}>Signup</button>
     </Form>
       </div>    </div>
   );

@@ -6,7 +6,7 @@ import { API } from "./global";
 
 function logout(){
   localStorage.clear();
-  // localStorage.removeItem('token')
+  localStorage.removeItem('token')
   window.location.href ="/"; //refresh
 
 }
@@ -21,7 +21,7 @@ export function Home() {
     })
       .then((res) => checkAuth(res))
       .then((result) => setState(result))
-      .catch((err) => logout());
+      .catch((err) => logout(err));
   }, []);
   return (
     <Base>
@@ -72,9 +72,3 @@ function checkAuth(res){
     return res.json();
   }
 }
-// function logout(){
-//   localStorage.clear();
-//   // localStorage.removeItem('token')
-//   window.location.href ="/"; //refresh
-
-// }

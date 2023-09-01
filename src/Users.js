@@ -15,7 +15,7 @@ export function Users() {
     <Base>
       <div className="users">
         <h1>Users</h1>
-        <div>{state ? <GetUsers data={state} /> : <h1>Loading</h1>}</div>
+        <div>{state ? <GetUsers data={state} /> : <h3>Loading</h3>}</div>
       </div>
     </Base>
   );

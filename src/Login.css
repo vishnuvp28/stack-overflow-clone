@@ -54,6 +54,24 @@
     background-color: rgb(57, 99, 251);
 
 }
+.red{
+    background-color: rgb(222, 4, 4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    color: antiquewhite;
+    font-size: large;
+    margin-left: 150px;
+    width: 150px;
+}
+.red:hover{
+    background-color: rgb(209, 64, 64);
+
+}
 
 
 img{
