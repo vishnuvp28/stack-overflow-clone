@@ -13,7 +13,8 @@ export function Questions() {
       .then((result) => setState(result));
   }, []);
 
-  // console.log(state);
+  
+  console.log(state);
   return (
     <Base>
       <div className="qn">

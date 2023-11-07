@@ -23,9 +23,7 @@ function App() {
           <Login />
         </Route>
         <Route path="/home">
-          <ProtectedRoute>
             <Home />
-          </ProtectedRoute>
         </Route>
         <Route path="/questions">
           <Questions />
@@ -52,7 +50,7 @@ function App() {
 
 export default App;
 
-function ProtectedRoute({ children }) {
-  const token = true;
-  return token ? <section>{children}</section> : <h1>Unauthorized entries</h1>;
-}
+// function ProtectedRoute({ children }) {
+//   const token = true;
+//   return token ? <section>{children}</section> : <h1>Unauthorized entries</h1>;
+// }
