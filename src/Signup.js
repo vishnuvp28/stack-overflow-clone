@@ -59,7 +59,7 @@ export function Signup() {
           <br></br>
           <div className="alink">
             <a href="#" >Forgot Password?</a><br></br>
-          <a href="http://localhost:3000/login">Login</a>
+          <a href="/login">Login</a>
         </div>
           <br></br>
         </Form>
