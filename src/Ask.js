@@ -29,7 +29,7 @@ export const Ask = () => {
       headers: { "Content-Type": "application/json" },
     });
     alert("Your question added successfully");
-    history.push("/home");
+    history.push("/");
   };
   return (
     <div className="ask">
@@ -74,6 +74,7 @@ export const Ask = () => {
         <button type="submit" className="bu">
           Post Your Question
         </button>
+     
       </form>
     </div>
   );

@@ -9,7 +9,7 @@ import { Sidenav } from "./Sidenav";
 function logout(){
   localStorage.clear();
   // localStorage.removeItem('token')
-  window.location.href ="/login"; //refresh
+  // window.location.href ="/login"; //refresh
 
 }
 export function Base({title,children}) {

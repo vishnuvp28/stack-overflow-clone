@@ -5,24 +5,24 @@ import { Tags } from "./Tags";
 import { Users } from "./Users";
 import { Companies } from "./Companies";
 import { Home } from "./Home";
-import { Login } from "./Login";
+// import { Login } from "./Login";
 import { Ask } from "./Ask";
 import Answer from "./Answer";
 import { useState } from "react";
-import { Signup } from "./Signup";
+// import { Signup } from "./Signup";
 
 function App() {
   const [state, setState] = useState();
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/">
+        {/* <Route exact path="/">
           <Signup />
         </Route>
         <Route path="/login">
           <Login />
-        </Route>
-        <Route path="/home">
+        </Route> */}
+        <Route exact path="/">
             <Home />
         </Route>
         <Route path="/questions">
@@ -41,7 +41,7 @@ function App() {
           <Ask />
         </Route>
         <Route path="/answer/:id">
-          <Answer state={state} />
+          <Answer state={state} setState={setState}/>
         </Route>
       </Switch>
     </div>

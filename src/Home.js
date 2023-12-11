@@ -5,20 +5,16 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { API } from "./global";
 
 function logout(){
-  localStorage.clear();
-  localStorage.removeItem('token')
-  window.location.href ="/"; //refresh
+  // localStorage.clear();
+  // localStorage.removeItem('token')
+  // window.location.href ="/"; //refresh
 
 }
 export function Home() {
   const [state, setState] = useState(null);
   const history = useHistory();
   useEffect(() => {
-    fetch(`${API}/home`,{
-      headers:{
-        "x-auth-token":localStorage.getItem("token")
-      }
-    })
+    fetch(`${API}/`)
       .then((res) => checkAuth(res))
       .then((result) => setState(result))
       .catch((err) => logout(err));

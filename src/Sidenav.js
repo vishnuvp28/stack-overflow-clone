@@ -6,7 +6,7 @@ export function Sidenav() {
   const history=useHistory();
   return (
     <div className="side"><br></br>
-       <button className="sidenav" onClick={()=>history.push("/home")} >
+       <button className="sidenav" onClick={()=>history.push("/")} >
         Home
       </button><br></br><br></br>
       <label className='public'>PUBLIC</label>

@@ -36,7 +36,7 @@ const GetQuestion = ({ data }) => {
     },
   });
   const ans = data.answer;
-  console.log(ans);
+  // console.log(ans);
   const postAnswer = async (value) => {
     await fetch(
       `${API}/answer/${id}`,
@@ -48,7 +48,7 @@ const GetQuestion = ({ data }) => {
       [id]
     );
     alert("Your Answer Added Successfully");
-    history.push("/home");
+    history.push("/");
   };
   return (
     <div>
@@ -85,6 +85,9 @@ const GetQuestion = ({ data }) => {
         <br></br>
         <button type="submit" className="btn2">
           Post Your Answer
+        </button><br></br>
+        <button type="submit" className="btn2" onClick={()=>history.push('/')}>
+          Back
         </button>
       </form>
     </div>
