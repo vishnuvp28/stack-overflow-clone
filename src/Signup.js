@@ -31,53 +31,48 @@ export function Signup() {
   return (
     <div className="signup">
       <div className="div">
-      <div className="div1">
-        <img className="img"
-          src="https://images.unsplash.com/photo-1511649475669-e288648b2339?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80"
-          alt="img"
-        ></img>
-      </div>
-      <div className="div2">
-        <form onSubmit={handleSubmit}>
-          <br></br> <br></br>
-          <h1 className="si">Sign up</h1> <br></br>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Control
-              placeholder="Enter name"
-              value={values.userName}
-              onChange={handleChange}
-              name="userName"
-              autoComplete="username"
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Control
-              type="password"
-              value={values.password}
-              onChange={handleChange}
-              name="password"
-              placeholder="Password"
-              autoComplete="current-password"
-            />
-          </Form.Group>
-          <button
-            className="b"
-            variant="primary"
-            type="submit"
-          >
-            Sign Up
-          </button>
-          <br></br>
-          <div className="alink">
-            <a href="#">Forgot Password?</a>
-            <br></br>
-            <a href="/login">Login</a>
-          </div>
-
-          <br></br>
-        </form>
+        <div className="div1">
+          <img
+            className="img"
+            src="https://images.unsplash.com/photo-1511649475669-e288648b2339?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80"
+            alt="img"
+          ></img>
         </div>
-
+        <div className="div2">
+          <form onSubmit={handleSubmit} className="form">
+            <br></br> <br></br>
+            <h1 className="si">Sign up</h1> <br></br>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Control
+                placeholder="Enter name"
+                value={values.userName}
+                onChange={handleChange}
+                name="userName"
+                autoComplete="username"
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Control
+                type="password"
+                value={values.password}
+                onChange={handleChange}
+                name="password"
+                placeholder="Password"
+                autoComplete="current-password"
+              />
+            </Form.Group>
+            <button className="b" variant="primary" type="submit">
+              Sign Up
+            </button>
+            <br></br>
+            <div className="alink">
+              <a href="#">Forgot Password?</a>
+              <br></br>
+              <a href="/login">Login</a>
+            </div>
+            <br></br>
+          </form>
+        </div>
       </div>{" "}
     </div>
   );

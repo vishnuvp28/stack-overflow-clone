@@ -4,7 +4,6 @@
     
 }
 .signup{
-    border:2px solid black;
     display: flex;
     flex-wrap: wrap;
     height: 109vh; 
