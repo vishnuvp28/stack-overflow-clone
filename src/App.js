@@ -9,6 +9,8 @@ import { Home } from "./Home";
 import { Ask } from "./Ask";
 import Answer from "./Answer";
 import { useState } from "react";
+import { Signup } from "./Signup";
+import { Login } from "./Login";
 // import { Signup } from "./Signup";
 
 function App() {
@@ -16,13 +18,13 @@ function App() {
   return (
     <div className="App">
       <Switch>
-        {/* <Route exact path="/">
+        <Route exact path="/">
           <Signup />
         </Route>
         <Route path="/login">
           <Login />
-        </Route> */}
-        <Route exact path="/">
+        </Route>
+        <Route exact path="/home">
             <Home />
         </Route>
         <Route path="/questions">

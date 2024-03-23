@@ -13,14 +13,11 @@
 }
 
 .div1{
-    /* border:2px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 700px;
-    /* width: 700px;
-    padding-right: 50px;
-    padding-left: 50px; */
+  
     object-fit: cover;
 
 }

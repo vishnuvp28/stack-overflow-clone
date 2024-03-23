@@ -1,141 +1,91 @@
-.si{
-    display: flex;
-    justify-content: center;
-    
+.si {
+  display: flex;
+  justify-content: center;
+
 }
-.signup{
-    border:2px solid black;
-    display: flex;
-    flex-wrap: wrap;
-    height: 109vh; 
-    justify-content: center;
-    align-items: center;
-    /* box-shadow: -5px -5px 12px #ffffff,
-5px 5px 12px rgba(0, 0, 0, 0.20); */
-/* box-shadow:  5px 5px 12px #ffffff,
-5px 5px 12px rgba(0, 0, 0, 0.4); */
-box-shadow: 0px 10px 10px 0px rgb(166, 165, 165),
-           0px 10px 10px 0px rgb(166, 165, 165)
-;
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-image: conic-gradient(blueviolet,orangered ,rgb(115, 252, 17),orangered ,blueviolet); */
 
 }
 
-.div1{
-    /* border:2px solid red; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 700px;
-    /* width: 700px;
-    padding-right: 50px;
-    padding-left: 50px; */
-    object-fit: cover;
-    /* box-shadow: 0px 10px 10px 0px  black; */
-
-
+.div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 700px;
+  width: 1400px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 18px #000000, 15px 15px 18px rgba(0, 0, 0, 0.3);
 }
-.div2{
-    border:0.5px solid rgb(204, 204, 203);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 700px;
-    width: 700px;
-    padding: 50px;
-    padding-top: 50px ;
-
+.div1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.div2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color:aliceblue;
 }
 
-.b{
-    background-color: rgb(39, 85, 252);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 12px;
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-    color: antiquewhite;
-    font-size: large;
-    margin-left: 150px;
-    width: 150px;
-
+.b {
+  background-color: rgb(39, 85, 252);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  display: flex;
+  color: antiquewhite;
+  font-size: large;
+  margin-bottom: 20px;
+  width: 150px;
 }
-.b:hover{
-    background-color: rgb(57, 99, 251);
-
+.b:hover {
+  background-color: rgb(57, 99, 251);
 }
 
-.alink{
-    display: flex;
-    justify-content: center;
-    
+.alink {
+  display: flex;
+  justify-content: center;
 }
 
-img{
-    height: 700px;
-    width: 700px;
-
+img {
+  height: 700px;
+  width: 700px;
 }
 
-.fb{
-   background-color: rgb(29, 62, 112);
-   color: rgb(248, 242, 235);
-   border-radius:5px;
-   border: none;
-
+.fb {
+  background-color: rgb(29, 62, 112);
+  color: rgb(248, 242, 235);
+  border-radius: 5px;
+  border: none;
 }
 
-.fb:hover{
-   background-color: rgb(53, 81, 122);
-    
+.fb:hover {
+  background-color: rgb(53, 81, 122);
 }
-.mb-3{
-   width: 400px;
-}
- @media screen and (max-width:1500px ) {
-    .div1{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width:100%;
-    height:109vh;
-    background: rgba(70, 69, 69, 0.9);
-    position:absolute;
-    top:0;
-    left:-120%;
-    z-index:-3;
-    transition :0.3s; 
-   
- }
+@media screen and (max-width: 1500px) {
+  .div1 {
+    width: 100%;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  .div {
+    width: 550px;
+  }
 }
 
-@media screen and(min-width:765px){
-    .div1{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width:100%;
-        height:109vh;
-        left:-100%;
-    transition :0.3s; 
-    z-index:-4;
-       display: none;
-    }
-}
-
-@media screen and(min-width:1500px){
-    .div2{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* width:100%; */
-        /* height:90vh; */
-        /* left:-100%; */
-    transition :0.3s; 
-    z-index:-4;
-       /* display: none; */
-    }
-     
+@media screen and(min-width:765px) {
+  .div1 {
+ 
+    display: none;
+    transition: 0.3s;
+  }
 }
 
