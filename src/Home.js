@@ -14,7 +14,7 @@ export function Home() {
   const [state, setState] = useState(null);
   const history = useHistory();
   useEffect(() => {
-    fetch(`${API}/`)
+    fetch(`${API}/home`)
       .then((res) => checkAuth(res))
       .then((result) => setState(result))
       .catch((err) => logout(err));

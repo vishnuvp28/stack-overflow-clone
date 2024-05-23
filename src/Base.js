@@ -30,7 +30,8 @@ export function Base({title,children}) {
         </div>
         <div className="account">
         <button onClick={()=>logout()}>
-          <AccountCircleIcon sx={{ fontSize: 50 }} color="action" />
+          <AccountCircleIcon sx={{ fontSize: 50 }} color="dark" />
+          <span>Logout</span>
           </button>
         </div>
       </div>

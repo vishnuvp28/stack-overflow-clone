@@ -42,9 +42,10 @@ input{
     display:flex;
     justify-content:flex-end;
     align-items: flex-end;
-    height: 50px;
-    width: 100px;
+    height: 80px;
+    width: 190px;
      position: relative;
+     padding: 5px;
 
 
     
