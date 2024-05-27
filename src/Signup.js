@@ -66,7 +66,7 @@ export function Signup() {
             </button>
             <br></br>
             <div className="alink">
-              <a href="#">Forgot Password?</a>
+              <a href="/signup">Forgot Password?</a>
               <br></br>
               <a href="/login">Login</a>
             </div>

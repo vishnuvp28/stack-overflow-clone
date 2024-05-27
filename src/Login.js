@@ -3,7 +3,6 @@ import "./Login.css";
 import Form from "react-bootstrap/Form";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useFormik } from "formik";
-import { API } from "./global";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { useState } from "react";
 
