@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useFormik } from "formik";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
+import { API } from "./global";
 
 export function Signup() {
   const history = useHistory();
@@ -12,7 +13,7 @@ export function Signup() {
     onSubmit: async (values) => {
       console.log(values);
 
-      const data = await fetch("https://stack-overflow-backend-whkt.onrender.com/", {
+      const data = await fetch(`${API}/`, {
         method: "POST",
         headers: {
           "Content-type": "application/json",
