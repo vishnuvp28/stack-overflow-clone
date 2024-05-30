@@ -29,7 +29,7 @@ export const Ask = () => {
       headers: { "Content-Type": "application/json" },
     });
     alert("Your question added successfully");
-    history.push("/");
+    history.push("/home");
   };
   return (
     <div className="ask">
