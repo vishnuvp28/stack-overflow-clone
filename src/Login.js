@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useFormik } from "formik";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { useState } from "react";
+import { API } from "./global";
 
 
 export  function Login() {
@@ -15,7 +16,7 @@ export  function Login() {
     onSubmit:async (values)=>{
       console.log(values);
 
-      const data = await fetch("https://stack-overflow-backend-whkt.onrender.com/login",{
+      const data = await fetch(`${API}/login`,{
         method:"POST",
         headers :{
           "Content-type":"application/json",
