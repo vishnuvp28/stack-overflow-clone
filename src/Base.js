@@ -10,7 +10,7 @@ function logout(){
   localStorage.clear();
 
   localStorage.removeItem('token')
-  window.location.href ="https://sensational-pixie-2f080c.netlify.app/login"; //refresh
+  window.location.href ="/login"; //refresh
 
 }
 
