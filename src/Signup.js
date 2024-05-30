@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useFormik } from "formik";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
 import { API } from "./global";
+import { Link } from "react-router-dom";
 
 export function Signup() {
   const history = useHistory();
@@ -49,7 +50,7 @@ export function Signup() {
                 value={values.userName}
                 onChange={handleChange}
                 name="userName"
-                autoComplete="username"
+                autoComplete="userName"
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -67,9 +68,9 @@ export function Signup() {
             </button>
             <br></br>
             <div className="alink">
-              <a href="/signup">Forgot Password?</a>
+              <Link href="/">Forgot Password?</Link>
               <br></br>
-              <a href="/login">Login</a>
+              <Link href="/login">Login</Link>
             </div>
             <br></br>
           </form>
