@@ -16,7 +16,7 @@ export function Signup() {
       const data = await fetch("https://stack-overflow-backend-whkt.onrender.com/", {
         method: "POST",
         headers: {
-          "Content-type": "applicati  on/json",
+          "Content-type": "application/json",
         },
         body: JSON.stringify(values),
       });
