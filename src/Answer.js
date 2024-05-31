@@ -85,7 +85,7 @@ const GetQuestion = ({ data }) => {
         <button type="submit" className="btn2">
           Post Your Answer
         </button><br></br>
-        <button type="submit" className="btn2" onClick={()=>navigate('/')}>
+        <button type="submit" className="btn2" onClick={()=>navigate('/home')}>
           Back
         </button>
       </form>
