@@ -47,7 +47,7 @@ const GetQuestion = ({ data }) => {
       [id]
     );
     alert("Your Answer Added Successfully");
-    navigate("/");
+    navigate("/home");
   };
   return (
     <div>
