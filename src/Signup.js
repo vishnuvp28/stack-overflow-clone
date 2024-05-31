@@ -4,7 +4,6 @@ import Form from "react-bootstrap/Form";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useFormik } from "formik";
 import { Link, useNavigate } from "react-router-dom";
-import { API } from "./global";
 
 export function Signup() {
   const navigate=useNavigate();
@@ -12,6 +11,7 @@ export function Signup() {
     initialValues: { userName: "", password: "" },
     onSubmit: async (values) => {
       console.log(values);
+      try{
 
       const data = await fetch("https://stack-overflow-backend-whkt.onrender.com/", {
         method: "POST",
@@ -26,7 +26,12 @@ export function Signup() {
       } else {
         alert("User added successfully");
         navigate("/login");
+        
       }
+    }catch(error){
+      console.error("Error during signup:", error);
+        alert("An error occurred during signup. Please try again later.");
+    }
     },
   });
   return (
@@ -67,9 +72,9 @@ export function Signup() {
             </button>
             <br></br>
             <div className="alink">
-              <Link href="/">Forgot Password?</Link>
+              <Link to="/">Forgot Password?</Link>
               <br></br>
-              <Link href="/login">Login</Link>
+              <Link to="/login">Login</Link>
             </div>
             <br></br>
           </form>
