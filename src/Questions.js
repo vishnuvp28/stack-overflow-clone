@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { Base } from "./Base";
 import "./Questions.css";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { API } from "./global";
+import { useNavigate } from "react-router-dom";
 
 export function Questions() {
   const [state, setState] = useState([]);
-  const history = useHistory();
+  const navigate = useNavigate();
   useEffect(() => {
     fetch(`${API}/questions`)
       .then((res) => res.json())
@@ -19,7 +19,7 @@ export function Questions() {
     <Base>
       <div className="qn">
         <h1>All Questions</h1>
-        <button className="butt" onClick={() => history.push("/ask")}>Ask Questions</button>
+        <button className="butt" onClick={() => navigate("/ask")}>Ask Questions</button>
        
       </div>
       <div>
@@ -38,10 +38,11 @@ function GetQuestions({ data }) {
   );
 }
 function Data({ data }) {
-  const history = useHistory();
+  const navigate = useNavigate();
+
 
   return (
-    <div  className="card" onClick={()=>history.push(`/answer/${data._id}`)}>
+    <div  className="card" onClick={()=>navigate(`/answer/${data._id}`)}>
       <h3 className="topic">{data.topic}</h3>
       <p >{data.description}</p>
       <p>{data.userName}</p>

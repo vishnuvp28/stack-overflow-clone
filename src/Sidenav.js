@@ -1,29 +1,29 @@
 import PublicIcon from '@mui/icons-material/Public';
 import './Sidenav.css';
-import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { useNavigate } from 'react-router-dom';
 
 export function Sidenav() {
-  const history=useHistory();
+  const navigate=useNavigate();
   return (
     <div className="side"><br></br>
-       <button className="sidenav" onClick={()=>history.push("/")} >
+       <button className="sidenav" onClick={()=>navigate("/")} >
         Home
       </button><br></br><br></br>
       <label className='public'>PUBLIC</label>
      
-      <button className="sidenav"  onClick={()=>history.push("/questions")}>
+      <button className="sidenav"  onClick={()=>navigate("/questions")}>
         {" "} 
         <PublicIcon/> Questions
       </button><br></br>
-      <button className="sidenav"  onClick={()=>history.push("/tags")}>
+      <button className="sidenav"  onClick={()=>navigate("/tags")}>
         {" "} 
         Tags 
       </button><br></br>
-      <button className="sidenav"  onClick={()=>history.push("/users")}>
+      <button className="sidenav"  onClick={()=>navigate("/users")}>
         {" "} 
         Users
       </button><br></br>
-      <button  className="sidenav" onClick={()=>history.push("/companies")}>
+      <button  className="sidenav" onClick={()=>navigate("/companies")}>
         {" "} 
         Companies
       </button><br></br>

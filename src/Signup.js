@@ -3,12 +3,11 @@ import "./Signup.css";
 import Form from "react-bootstrap/Form";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useFormik } from "formik";
-import { useHistory } from "react-router-dom/cjs/react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { API } from "./global";
-import { Link } from "react-router-dom";
 
 export function Signup() {
-  const history = useHistory();
+  const navigate=useNavigate();
   const { values, handleChange, handleSubmit } = useFormik({
     initialValues: { userName: "", password: "" },
     onSubmit: async (values) => {
@@ -17,16 +16,16 @@ export function Signup() {
       const data = await fetch(`${API}/`, {
         method: "POST",
         headers: {
-          "Content-type": "application/json",
+          "Content-type": "applicati  on/json",
         },
         body: JSON.stringify(values),
       });
       if (data.status === 400) {
         alert("UserName already exist(redirecting to login page)");
-        history.push("/login");
+        navigate("/login");
       } else {
         alert("User added successfully");
-        history.push("/login");
+        navigate("/login");
       }
     },
   });
@@ -50,7 +49,7 @@ export function Signup() {
                 value={values.userName}
                 onChange={handleChange}
                 name="userName"
-                autoComplete="userName"
+                autoComplete="username"
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">

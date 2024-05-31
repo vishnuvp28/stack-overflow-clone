@@ -2,10 +2,10 @@ import React from "react";
 import "./Ask.css";
 import { useFormik } from "formik";
 import { API } from "./global";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useNavigate } from "react-router-dom";
 
 export const Ask = () => {
-  const history = useHistory();
+  const navigate=useNavigate();
   const { handleChange, handleSubmit, handleBlur, values } = useFormik({
     initialValues: {
       topic: "",
@@ -29,7 +29,7 @@ export const Ask = () => {
       headers: { "Content-Type": "application/json" },
     });
     alert("Your question added successfully");
-    history.push("/home");
+    navigate("/home");
   };
   return (
     <div className="ask">

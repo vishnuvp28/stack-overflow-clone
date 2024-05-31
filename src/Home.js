@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Base } from "./Base";
 import "./Home.css";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { API } from "./global";
+import { useNavigate } from "react-router-dom";
 
 function logout(){
   // localStorage.clear();
@@ -12,7 +12,8 @@ function logout(){
 }
 export function Home() {
   const [state, setState] = useState(null);
-  const history = useHistory();
+  const navigate=useNavigate();
+
   useEffect(() => {
     fetch(`${API}/home`)
       .then((res) => checkAuth(res))
@@ -23,7 +24,7 @@ export function Home() {
     <Base>
       <div className="qn">
         <h1>Top Questions</h1>
-        <button className="butt" onClick={() => history.push("/ask")}>
+        <button className="butt" onClick={() => navigate("/ask")}>
           Ask Questions
         </button>
       </div>
@@ -42,10 +43,11 @@ const GetQuestions = ({ data }) => {
 };
 
 const Data = ({ data }) => {
-  const history = useHistory();
+  const navigate=useNavigate();
+
   // const[state,setState]=useState();
   return (
-    <div className="card" onClick={() => history.push(`/answer/${data._id}`)}>
+    <div className="card" onClick={() => navigate(`/answer/${data._id}`)}>
       <h3 className="topic">{data.topic}</h3>
       <p>{data.userName}</p>
       <p>votes {data.votes}</p>

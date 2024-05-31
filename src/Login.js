@@ -3,13 +3,13 @@ import "./Login.css";
 import Form from "react-bootstrap/Form";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useFormik } from "formik";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { useState } from "react";
 import { API } from "./global";
+import { useNavigate } from "react-router-dom";
 
 
 export  function Login() {
-  const history =useHistory()
+  const navigate=useNavigate();
   const[formState,setFormState]=useState("success")
   const {values,handleChange,handleSubmit} = useFormik({
     initialValues :{userName : "",password:""},
@@ -33,7 +33,7 @@ export  function Login() {
          const result = await data.json();
         console.log("Success",result);
         localStorage.setItem("token",result.token);
-         history.push('/home')
+        navigate('/home')
       }
     
     },
@@ -64,7 +64,7 @@ export  function Login() {
        
       </button><br></br>
      
-      <button variant="danger" className="red" onClick={()=>history.push("/")}>Sign Up</button>
+      <button variant="danger" className="red" onClick={()=>navigate("/")}>Sign Up</button>
       </Form>
       </div>
       </div>    </div>

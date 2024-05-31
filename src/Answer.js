@@ -4,9 +4,8 @@ import "./Answer.css";
 import { useState } from "react";
 import { API } from "./global";
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useFormik } from "formik";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const Answers = () => {
   const [state, setState] = useState(null);
@@ -24,7 +23,7 @@ const Answers = () => {
 
 const GetQuestion = ({ data }) => {
   const { id } = useParams();
-  const history = useHistory();
+  const navigate = useNavigate();
   const { handleSubmit, handleChange, values, handleBlur } = useFormik({
     initialValues: {
       userNameAnswer: "",
@@ -48,7 +47,7 @@ const GetQuestion = ({ data }) => {
       [id]
     );
     alert("Your Answer Added Successfully");
-    history.push("/");
+    navigate("/");
   };
   return (
     <div>
@@ -86,7 +85,7 @@ const GetQuestion = ({ data }) => {
         <button type="submit" className="btn2">
           Post Your Answer
         </button><br></br>
-        <button type="submit" className="btn2" onClick={()=>history.push('/')}>
+        <button type="submit" className="btn2" onClick={()=>navigate('/')}>
           Back
         </button>
       </form>

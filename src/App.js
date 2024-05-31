@@ -1,4 +1,4 @@
-import { Route, Switch } from "react-router-dom";
+import { Route, Routes} from "react-router-dom";
 import "./App.css";
 import { Questions } from "./Questions";
 import { Tags } from "./Tags";
@@ -17,7 +17,7 @@ function App() {
   const [state, setState] = useState();
   return (
     <div className="App">
-      <Switch>
+      <Routes>
         <Route exact path="/"> 
           <Signup />
         </Route>
@@ -45,7 +45,7 @@ function App() {
         <Route path="/answer/:id">
           <Answer state={state} setState={setState}/>
         </Route>
-      </Switch>
+      </Routes>
     </div>
   );
 }
