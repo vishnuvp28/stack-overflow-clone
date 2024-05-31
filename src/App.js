@@ -18,33 +18,33 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route exact path="/"> 
-          <Signup />
-        </Route>
-        <Route path="/login">
-          <Login />
-        </Route>
-        <Route path="/home">
-            <Home />
-        </Route>
-        <Route path="/questions">
-          <Questions />
-        </Route>
-        <Route path="/tags">
-          <Tags />
-        </Route>
-        <Route path="/users">
-          <Users />
-        </Route>
-        <Route path="/companies">
-          <Companies />
-        </Route>
-        <Route path="/ask">
-          <Ask />
-        </Route>
-        <Route path="/answer/:id">
-          <Answer state={state} setState={setState}/>
-        </Route>
+        <Route exact path="/"
+          element={<Signup/>}
+       />
+        <Route path="/login"
+          element={<Login />}
+        />
+            <Route path="/home"
+          element={<Home />}
+        />
+             <Route path="/questions"
+          element={<Questions />}
+        />
+            <Route path="/tags"
+          element={<Tags />}
+        />
+            <Route path="/users"
+          element={<Users />}
+        />
+            <Route path="/companies"
+          element={<Companies />}
+        />
+           <Route path="/ask"
+          element={<Ask />}
+        />
+        <Route path="/answer/:id"
+          element={<Answer state={state} setState={setState}/>}
+      />
       </Routes>
     </div>
   );
